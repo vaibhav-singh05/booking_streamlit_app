@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 
-# Load data
+# Load hotel data
 with open("mock_hotel_data.json", "r") as file:
     hotel_data = json.load(file)
 
@@ -11,7 +11,7 @@ df = pd.DataFrame(hotel_data)
 st.set_page_config(page_title="Hotel Listings", layout="wide")
 st.title("🏨 Hotel Listings - Booking.com Style Prototype")
 
-# City Filter
+# Filter by city
 cities = df['city'].unique()
 selected_city = st.selectbox("Filter by City", cities)
 
@@ -21,25 +21,37 @@ st.markdown("---")
 
 for index, row in filtered_hotels.iterrows():
     col1, col2 = st.columns([1, 2])
-    
+
     with col1:
         st.image(row["image"], width=250)
-    
+
     with col2:
         st.subheader(row["name"])
         st.write(f"📍 **City:** {row['city']}")
         st.write(f"⭐ **Rating:** {row['rating']}")
         st.write(f"💰 **Price per Night:** ₹{row['price_per_night']}")
         st.write("✅ Available" if row['available'] else "❌ Not Available")
-
-        st.markdown("**🏷️ Facilities:**")
-        for fac in row.get("facilities", []):
-            st.markdown(f"- {fac}")
-
         st.button("Book Now", key=row["name"] + "_btn")
 
-    # ➕ New Section
+    # Facilities section (3 columns)
+    st.markdown("### 🛎️ Property Facilities")
+    facilities = row.get("facilities", [])
+    if facilities:
+        col1, col2, col3 = st.columns(3)
+        for i, fac in enumerate(facilities):
+            if i % 3 == 0:
+                col1.markdown(f"- {fac}")
+            elif i % 3 == 1:
+                col2.markdown(f"- {fac}")
+            else:
+                col3.markdown(f"- {fac}")
+    else:
+        st.write("No facilities listed.")
+
+
+    # About section
     st.markdown("### 📝 About this property")
     st.markdown(f"{row.get('description', 'No description available.')}")
 
+    
     st.markdown("---")
