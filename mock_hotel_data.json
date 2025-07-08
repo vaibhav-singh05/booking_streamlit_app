@@ -5,7 +5,15 @@
     "price_per_night": 4500,
     "rating": 4.7,
     "available": true,
-    "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "facilities": [
+      "Outdoor pool", "Free WiFi", "Children's playground", "Free parking", "Pets allowed",
+      "Emergency cord in bathroom", "Bar", "Badminton equipment", "CCTV in common areas",
+      "Business centre (extra charge)", "Daily housekeeping", "24-hour front desk",
+      "24-hour security", "Wheelchair accessible", "Restaurant", "Spa and wellness centre (extra charge)",
+      "Air conditioning", "Massage (extra charge)", "Tour desk"
+    ],
+    "description": "Located in the heart of Delhi, Taj Palace offers a royal blend of tradition and luxury. Enjoy sprawling gardens, fine dining, and top-notch service. Perfect for business or leisure travellers seeking elegance."
   },
   {
     "name": "Sea View Resort",
@@ -13,7 +21,14 @@
     "price_per_night": 3500,
     "rating": 4.3,
     "available": false,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "facilities": [
+      "Swimming pool", "WiFi", "Kid meals (extra charge)", "Free parking", "Packed lunches",
+      "Games room", "Pets allowed", "Wheelchair accessible", "24-hour front desk",
+      "Laundry (extra charge)", "Bar", "Fire extinguishers", "Concierge service",
+      "Spa facilities", "Tennis court (extra charge)"
+    ],
+    "description": "Nestled by the Arabian Sea, Sea View Resort is a tropical escape with stunning ocean views. Ideal for couples and families seeking beachside fun. Enjoy the pool, spa, and Goan hospitality."
   },
   {
     "name": "Lake Paradise Inn",
@@ -21,6 +36,12 @@
     "price_per_night": 2800,
     "rating": 4.1,
     "available": true,
-    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "facilities": [
+      "Swimming Pool", "WiFi available in all areas", "Family rooms", "Private parking",
+      "Beauty Services", "Air conditioning", "Trouser press (extra charge)", "Bar",
+      "Fax/photocopying (extra charge)", "Hair cut", "Daily housekeeping", "Security alarm"
+    ],
+    "description": "Lake Paradise Inn offers a peaceful retreat near the lakes of Udaipur. With heritage interiors and personalized service, it's a perfect mix of comfort and tradition. Great for romantic and cultural getaways."
   }
 ]
