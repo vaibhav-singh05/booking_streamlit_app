@@ -33,6 +33,19 @@ for index, row in filtered_hotels.iterrows():
         st.write("✅ Available" if row['available'] else "❌ Not Available")
         st.button("Book Now", key=row["name"] + "_btn")
 
+# 🛏️ Room Packages
+st.markdown("### 🛏️ Room Packages")
+rooms = row.get("rooms", [])
+if rooms:
+    for room in rooms:
+        with st.expander(f"{room['type']} - ₹{room['price']}"):
+            st.markdown(f"**Occupancy:** {room['occupancy']}")
+            st.markdown(f"**Refund Policy:** {room['refund']}")
+            st.markdown(f"**Meals:** {room['meal']}")
+            st.button("Book this room", key=f"{row['name']}_{room['type']}")
+else:
+    st.write("Room information is not available.")
+
     # Facilities section (3 columns)
     st.markdown("### 🛎️ Property Facilities")
     facilities = row.get("facilities", [])
@@ -53,5 +66,5 @@ for index, row in filtered_hotels.iterrows():
     st.markdown("### 📝 About this property")
     st.markdown(f"{row.get('description', 'No description available.')}")
 
-    
+
     st.markdown("---")
